@@ -13,7 +13,6 @@ if(!file.exists("UCI HAR Dataset")) {
 ## load required packages
 require(plyr, quietly=TRUE)
 require(dplyr, quietly=TRUE)
-require(tidyr, quietly=TRUE)
 
 ## read data into R
 xtrain <- read.table("UCI HAR Dataset/train/X_train.txt")
