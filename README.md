@@ -5,14 +5,15 @@ output: html_document
 ---
 
 
-## Packages required by the analysis file
+## Packages required by run_analysis.R
 The script run_analysis.R requires the plyr and dplyr packages. The script will load these packages, but they must be installed prior to running it.
 
-## Data used by the analysis file
+## Data used by run_analysis.R
 The script uses a set of data collected from the accelerometers of the Samsung Galaxy S smartphone. If the folder containing these data files is not in the working directory, it will download it from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. If the folder has not been unzipped, the script will unzip it.
 
-## Function of run_analysis.R
-The analysis script creates a text file called UCIHAR\_means\_tidy\_wide.txt in the working directory. This file contains a tidy data set (wide format) consisting of the means of selected variables from the original data set for each activity and each subject. 
+## What the analysis file (run_analysis.R) does
+The analysis script creates a text file called UCIHAR\_means\_tidy\_wide.txt in the working directory. This file contains a tidy data set (wide format) consisting of the means of selected variables from the original data set for each activity and each subject. Once created, the file can be read into R with: 
+read.table("UCIHAR_means_tidy_wide.txt", header=TRUE) 
 
 As an example, according to the "featuresinfo" file in the original data set, the variable "tBodyAccmeanX" is the mean value of a particular signal having to do with the measurement of body acceleration along the X axis. The original data set contained multiple values of "tBodyAccmeanX" for each subject and activity. The data set  output by the script summmarizes this data, providing the average value of "tBodyAccmeanX" and 66 other variables for each subject and activity. 
 
